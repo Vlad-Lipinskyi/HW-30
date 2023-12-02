@@ -1,34 +1,30 @@
-.box{
-    width: 100%;
-    height: 100%;
-
-    animation-name: BoxRun;
-    animation-duration: 5000ms;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    position: relative;
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: BoxRun 5s linear infinite; 
 }
 
-@keyframes BoxRun{
-    0%{
-        color: red;
-        top: 50px;
-        left: 0px;
+@keyframes BoxRun {
+    0% {
+      transform: translateY(0) translateX(0); 
+      background-color: red; 
     }
-
-    38%{
-        color: blue;
-        top: 100px;
-
+    25% {
+      transform: translateY(500px) translateX(0); 
+      background-color: blue; 
     }
-
-    75%{
-        color: green;
-        left: 50px;
+    50% {
+      transform: translateY(500px) translateX(500px); 
+      background-color: green; 
     }
-
-    100%{
-        color: yellow;
-        top: 50px;
+    75% {
+      transform: translateY(0) translateX(500px); 
+      background-color: yellow; 
+      
     }
-}
+    100% {
+      transform: translateY(0) translateX(0); 
+      background-color: red; 
+    }
+  }
